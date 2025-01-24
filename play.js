@@ -1,4 +1,4 @@
-
+const postRev = () => {
 const updateRev = () => {
     
 const oneBillion = 1000000000;
@@ -29,4 +29,16 @@ console.log(RevNow);
 };
 updateRev();
 setInterval(updateRev, 1000)
+
+return (
+    <h1>{updateRev}</h1>
+)
+};
+
 // console.log(RevNow);
+
+// find out how to display function output to a h1 tag incrementing in seconds
+// then change to miliseconds potentially
+
+// add $ _______ aprox city revenue
+// estimated rate of 1B a year to now since Jan 5, 2025()
