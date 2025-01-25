@@ -28,13 +28,28 @@ const truckOP = 3.60
 const busOP = 5.40
 
 // off peak/peak ratio     75% cheaper off peak  78% cheaper for motorcycles
-const carOPP = carOP / car
-const bikeOPP = bikeOP / bike
-const truckOPP = truckOP / truck
-const busOPP = busOP / bus
+const carOPratio = carOP / car
+const bikeOPratio = bikeOP / bike
+const truckOPratio = truckOP / truck
+const busOPratio = busOP / bus
 
-const busOPratio = busOPP * bus
-console.log(busOPratio);
+// console.log(carOPratio); //.25
+// console.log(bikeOPratio); //.23
+// console.log(truckOPratio); //.25
+// console.log(busOPratio); //.25
+
+
+
+
+const carOPprice = carOPratio * car
+const bikeOPprice = bikeOPratio * bike
+const truckOPprice = truckOPratio * truck
+const busOPprice = busOPratio * bus
+// console.log(carOPprice);
+// console.log(bikeOPprice);
+// console.log(truckOPprice);
+// console.log(busOPprice);
+
 
 
 
@@ -59,16 +74,19 @@ const truckNOEZ = 21.60
 const busNOEZ = 32.40
 
 // peak ratio NOEZ
-const carPeakNOEZratio = car / carNOEZ
-const bikePeakNOEZratio = bike / bikeNOEZ
-const truckPeakNOEZratio = truck / truckNOEZ
-const busPeakNOEZratio = bus / busNOEZ
+const carNOEZratio = carNOEZ / car
+const bikeNOEZratio = bikeNOEZ / bike
+const truckNOEZratio = truckNOEZ / truck
+const busNOEZratio = busNOEZ / bus
 
 // Result: NOEZPass is 66% more expensive overall
-// console.log(carPeakNOEZratio);
-// console.log(bikePeakNOEZratio);
-// console.log(truckPeakNOEZratio);
-// console.log(busPeakNOEZratio);
+// console.log(carNOEZratio);
+// console.log(bikeNOEZratio);
+// console.log(truckNOEZratio);
+// console.log(busNOEZratio);
+
+
+
 
 // Credits only for peak and EzPass Holders
 // QTHT credit is 1/2 HTLT overall
@@ -84,6 +102,27 @@ const QTHTtruckEZCreditPeak = 3.60
 
 const HTLTbusEZCreditPeak = 12
 const QTHTbusEZCreditPeak = 6
+
+console.log( car * carOPratio * carNOEZratio );
+console.log( car - QTHTcarEZCreditPeak - QTHTcarEZCreditPeak );
+
+// logic
+
+// toll:
+// assign each vehicle to a price
+// modify the price if offpeak is chosen by OP modifier, diffrerent one for motorcycles
+// if no ezpass modify price
+
+// credit:
+// for peak only
+// for ezpass users only
+// subtract for HTLT or QTHT
+// if exiting QTHT subtract
+
+
+subtract 
+
+
 
 
 // this plus toll prices with regular, mid tier, or no EZ Pass

@@ -4,12 +4,14 @@ import { useState } from "react";
 const CommuteCostCalculator = () => {
 
 // to input values or calculate rates
-const [vehicle, setVehicle] = useState()
-const [peak, setPeak] = useState()
-const [ezpass, setVehicle] = useState()
-const [route, setRoute] = useState()
-const [eastTunnelExit, seteastTunnelExit] = useState()
-
+// const [vehicle, setVehicle] = useState(0)
+// const [peak, setPeak] = useState(0)
+// const [ezpass, setVehicle] = useState(0)
+// const [route, setRoute] = useState(0)
+// const [eastTunnelExit, seteastTunnelExit] = useState(0)
+const [tollPrice, setTollPrice] = useState()
+const [tollCredits, setTollCredits] = useState()
+const [totalToll, setTotalToll] = useState()
 
 
 
