@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import CommuteCostCalculator from './Calculator'
 
 function App() {
   const [revNow, setRevNow] = useState(0);
@@ -31,7 +32,7 @@ function App() {
 
     useEffect(() => {
       updateRev();
-      const interval = setInterval(updateRev, 1000);
+      const interval = setInterval(updateRev, 100);
       return () => clearInterval(interval);
     }, []);
 
@@ -40,10 +41,11 @@ function App() {
     <>
       <h1 className='revNow'>${revNow.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h1>
       <h3> Aprox. City revenue generated to now since Congestion Pricing Start Date (1/5/2025) </h3>
-      <h5>at goal Rate of 1 Billion/year </h5>
+      <h5>at city's goal revenue rate of 1 Billion/year </h5>
+      <CommuteCostCalculator/>
     </>
   );
-}
+};
 // figure out how to display function output
 export default App
 
