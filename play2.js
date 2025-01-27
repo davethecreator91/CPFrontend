@@ -1,4 +1,51 @@
 
+// const calculateToll = () => {
+
+    // if (formData.peak == 'Peak' && formData.ezpass == 'yesEzpass') {
+    //     routeCredit = 
+    //     (formData.route == 'HLtunnels') ? HTLTrouteCredit:
+    //     (formData.route == 'QHtunnels') ? QTHTrouteCredit: 0;
+//     let vehiclePrice = 
+//         (formData.vehicle = 'car') ? 9:
+//         (formData.vehicle = 'bike') ? 4.50:
+//         (formData.vehicle = 'truck') ? 14.40:
+//         (formData.vehicle = 'bus') ? 21.60: 0;
+//     }
+// to input values or calculate rates
+const [vehicle, setVehicle] = useState(0)
+const [peak, setPeak] = useState(0)
+const [ezpass, setVehicle] = useState(0)
+const [route, setRoute] = useState(0)
+// const [QHtunnelsExit, setQHTunnelsExit] = useState(0)
+// let NOEZratio = 1.5
+// (formData.vehicle == 'Car') ? 1.5:
+// (formData.vehicle == 'Bike') ? 1.5:
+// (formData.vehicle == 'Truck') ? 1.5:
+// (formData.vehicle == 'Bus') ? 1.49: 0;
+
+    // rules
+    // if OP peak price * OP Ratio
+    // 
+
+    // logic
+
+// toll:
+// assign each vehicle to a price
+// modify the price if offpeak is chosen by OP modifier, diffrerent one for motorcycles
+// if no ezpass modify price
+
+// credit:
+// for peak only
+// for ezpass users only
+// subtract for HTLT or QTHT
+// if exiting QTHT subtract
+
+// this plus toll prices with regular, mid tier, or no EZ Pass
+// how often do you commute a week
+// that a month, year
+
+
+
 
 
 // peak prices
@@ -80,10 +127,10 @@ const truckNOEZratio = truckNOEZ / truck
 const busNOEZratio = busNOEZ / bus
 
 // Result: NOEZPass is 66% more expensive overall
-// console.log(carNOEZratio);
-// console.log(bikeNOEZratio);
-// console.log(truckNOEZratio);
-// console.log(busNOEZratio);
+console.log(carNOEZratio);
+console.log(bikeNOEZratio);
+console.log(truckNOEZratio);
+console.log(busNOEZratio);
 
 
 
@@ -103,31 +150,10 @@ const QTHTtruckEZCreditPeak = 3.60
 const HTLTbusEZCreditPeak = 12
 const QTHTbusEZCreditPeak = 6
 
-console.log( car * carOPratio * carNOEZratio );
-console.log( car - QTHTcarEZCreditPeak - QTHTcarEZCreditPeak );
-
-// logic
-
-// toll:
-// assign each vehicle to a price
-// modify the price if offpeak is chosen by OP modifier, diffrerent one for motorcycles
-// if no ezpass modify price
-
-// credit:
-// for peak only
-// for ezpass users only
-// subtract for HTLT or QTHT
-// if exiting QTHT subtract
+// console.log( car * carOPratio * carNOEZratio );
+// console.log( car - QTHTcarEZCreditPeak - QTHTcarEZCreditPeak );
 
 
-subtract 
-
-
-
-
-// this plus toll prices with regular, mid tier, or no EZ Pass
-// how often do you commute a week
-// that a month, year
 
 
 
