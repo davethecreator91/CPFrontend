@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { updateTrip } from "./service/tripService";
 
 
-const CommuteCostCalculator = ({ addTrip }) => {
+const UpdateTrip = ({ trip, handleUpdateTrip }) => {
 
 
 const [tollPrice, setTollPrice] = useState(0)
@@ -37,7 +38,7 @@ const handleSubmit = async (e) => {
 
     try {
         const response = await fetch("http://localhost:3001/trip", {
-            method: "POST",
+            method: "PUT",
             headers: {"Content-Type": "application/json",},
             body: JSON.stringify(formData),
         });
@@ -157,7 +158,7 @@ formData.total = toll - credits
     return (
 <>
 <br></br>
-<h2>Your Commute Cost Calculator:</h2> 
+<h2>Update Saved Trip:</h2> 
 <form className="calculator">
     <label>Trip Title: </label>
     <input 
@@ -276,10 +277,10 @@ formData.total = toll - credits
     id="save"
     type='submit'
     onClick={handleSubmit}
-    >Save for Later</button>
+    >Update Trip</button>
 </form>
 </>
     );
 };
 
-export default CommuteCostCalculator;
+export default UpdateTrip;

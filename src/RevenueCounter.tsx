@@ -37,6 +37,7 @@ function RevenueCounter() {
 
   return (
     <>
+  
       <h1 className='revNow'>${revNow.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h1>
       <h3> Aprox. City revenue generated to now since Congestion Pricing Start Date (1/5/2025) </h3>
       <h5>at city's goal revenue rate of 1 Billion/year </h5>
